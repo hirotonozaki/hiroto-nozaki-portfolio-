@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="dark">
+
+  <!-- ============================================================
+       SEO
+       ============================================================ -->
+  <title>Hiroto Nozaki — Portfolio | Web Production / Front-end</title>
+  <meta name="description" content="野崎大翔（Hiroto Nozaki）のポートフォリオサイト。Web制作・フロントエンド実装・UI/UX設計を担当。架空案件4本（焼肉 黒耀／NOVA TECH CAREERS／NEXUS Inc./NOIR MEN'S CLINIC）の企画書と実装をご覧いただけます。React / TypeScript 版（焼肉 黒耀 React Edition）も公開。">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="robots" content="index,follow">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/">
+  <meta property="og:title" content="Hiroto Nozaki — Portfolio">
+  <meta property="og:description" content="架空企業4社の案件で、企画・情報設計・UIデザイン・実装まで担当したポートフォリオ。Web制作・フロントエンド職を目指しています。">
+  <meta property="og:site_name" content="Hiroto Nozaki Portfolio">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/assets/images/ogp.png">
+  <meta property="og:image:secure_url" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/assets/images/ogp.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hiroto Nozaki — Portfolio. 伝わる順番を、設計する。Web Production / Front-end.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hiroto Nozaki — Portfolio">
+  <meta name="twitter:description" content="架空企業4社の案件で、企画・情報設計・UIデザイン・実装まで担当したポートフォリオ。">
+  <meta name="twitter:image" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/assets/images/ogp.png">
+  <meta name="twitter:image:alt" content="Hiroto Nozaki — Portfolio. 伝わる順番を、設計する。">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' font-style='italic' fill='%23c9a96e' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts: Fraunces(display, variable serif) + Noto Sans JP(body) + JetBrains Mono(mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- JS が無効/失敗した場合のフォールバック: reveal を即表示 -->
+  <noscript>
+    <style>[data-reveal]{opacity:1!important;transform:none!important;}</style>
+  </noscript>
+
+  <!-- 構造化データ (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "野崎大翔",
+    "alternateName": "Hiroto Nozaki",
+    "jobTitle": "Web Production / Front-end Developer",
+    "url": "https://hirotonozaki.github.io/hiroto-nozaki-portfolio/",
+    "sameAs": ["https://github.com/hirotonozaki"],
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "WordPress", "UI/UX Design", "Web Production"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- スキップリンク -->
+  <a class="c-skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <a class="c-logo" href="#hero" aria-label="トップへ">
+        <span class="c-logo__mark" aria-hidden="true">N</span>
+        <span class="c-logo__text">
+          <span class="c-logo__name">Hiroto Nozaki</span>
+          <span class="c-logo__role">Portfolio · 2026</span>
+        </span>
+      </a>
+
+      <nav class="l-header__nav" aria-label="グローバルナビゲーション" id="globalNav">
+        <ul class="c-nav">
+          <li><a href="#about" class="c-nav__link"><span class="c-nav__num">01</span>About</a></li>
+          <li><a href="#works" class="c-nav__link"><span class="c-nav__num">02</span>Works</a></li>
+          <li><a href="#skills" class="c-nav__link"><span class="c-nav__num">03</span>Skills</a></li>
+          <li><a href="#contact" class="c-nav__link"><span class="c-nav__num">04</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="c-burger" id="burger" aria-controls="globalNav" aria-expanded="false" aria-label="メニューを開く">
+        <span class="c-burger__line"></span>
+        <span class="c-burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="p-hero" id="hero" aria-labelledby="heroHeading">
+      <div class="p-hero__bg" aria-hidden="true">
+        <div class="p-hero__noise"></div>
+      </div>
+
+      <div class="l-container p-hero__inner">
+        <p class="p-hero__eyebrow" data-reveal>
+          <span class="c-pulse" aria-hidden="true"></span>
+          Portfolio · Open to Work — 2026 Spring
+        </p>
+
+        <h1 class="p-hero__heading" id="heroHeading">
+          <span class="p-hero__line" data-reveal data-reveal-delay="1">
+            <em>伝わる順番を、</em>設計する。
+          </span>
+          <span class="p-hero__line p-hero__line--sub" data-reveal data-reveal-delay="2">
+            Web Production / Front-end
+          </span>
+        </h1>
+
+        <p class="p-hero__lead" data-reveal data-reveal-delay="3">
+          野崎大翔（Hiroto Nozaki）のポートフォリオです。<br>
+          架空企業4社の案件で、<em>企画・情報設計・UI設計・実装まで</em>を担当しました。<br>
+          見た目だけではなく、<em>ユーザーが迷わず使える構造</em>を意識しています。
+        </p>
+
+        <div class="p-hero__cta" data-reveal data-reveal-delay="4">
+          <a href="#works" class="c-btn c-btn--primary">
+            制作物を見る
+            <span class="c-btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#about" class="c-btn c-btn--ghost">
+            自己紹介を読む
+          </a>
+        </div>
+
+        <dl class="p-hero__selected" data-reveal data-reveal-delay="5" aria-label="Selected Works">
+          <p class="p-hero__selected-label">
+            <span class="p-hero__selected-label-line" aria-hidden="true"></span>
+            Selected Works · Practice / Fictional Client Works
+          </p>
+          <div class="p-hero__selected-list">
+            <div class="p-hero__selected-item">
+              <dt>01</dt><dd>焼肉 黒耀</dd>
+            </div>
+            <div class="p-hero__selected-item">
+              <dt>02</dt><dd>NOVA TECH CAREERS</dd>
+            </div>
+            <div class="p-hero__selected-item">
+              <dt>03</dt><dd>NEXUS Inc.</dd>
+            </div>
+            <div class="p-hero__selected-item">
+              <dt>04</dt><dd>NOIR MEN'S CLINIC</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+
+      <a href="#about" class="p-hero__scroll" aria-label="次のセクションへスクロール">
+        <span class="p-hero__scroll-text">Scroll</span>
+        <span class="p-hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section class="p-section p-about" id="about" aria-labelledby="aboutHeading">
+      <div class="l-container">
+        <header class="c-section-head" data-reveal>
+          <p class="c-section-head__label">01 — About</p>
+          <h2 class="c-section-head__title" id="aboutHeading">
+            <em>Web制作会社</em>の<br>現場を目指しています。
+          </h2>
+        </header>
+
+        <div class="p-about__grid">
+          <div class="p-about__lead" data-reveal>
+            <p>
+              野崎大翔（Hiroto Nozaki）と申します。デジタルハリウッドSTUDIOで学びながら、<em>株式会社アストラザスタジオでインターン</em>として実務に携わっています。WordPressの更新・修正・ページ追加・デザイン反映を通じて、「作って終わり」ではない<em>運用され続ける設計</em>の重要性を学んでいる途中です。
+            </p>
+            <p>
+              インターンに入る前は「自分が綺麗だと思うサイト」を作ることに夢中でした。でも実務に触れて、<br>
+              <em>更新する人がいる</em>こと、<br>
+              <em>2年後も読めるコード</em>であること、<br>
+              <em>予算と時間</em>に収まること——<br>
+              その制約の中で初めて「良いサイト」が成立するのだと知りました。今は企画書から運用想定まで言語化してから手を動かしています。
+            </p>
+            <p>
+              苦労したのは「焼肉 黒耀」の画像最適化でした。2MB級のJPEGを並べて「動けばOK」にしてしまい、Lighthouseで現実を突きつけられました。以降、次の作品では前作の弱点を潰すサイクルで取り組んでいます。
+            </p>
+          </div>
+
+          <ul class="p-about__strengths" aria-label="3つの強み">
+            <li class="p-about__strength" data-reveal data-reveal-delay="1">
+              <p class="p-about__strength-num">01</p>
+              <h3 class="p-about__strength-title">運用視点で設計する</h3>
+              <p class="p-about__strength-body">インターン先でのWordPress更新・修正対応を通じて、「半年後の自分や他の人が触っても破綻しない構造」を意識するようになりました。命名・コメント・分割の判断軸が変わりました。</p>
+            </li>
+            <li class="p-about__strength" data-reveal data-reveal-delay="2">
+              <p class="p-about__strength-num">02</p>
+              <h3 class="p-about__strength-title">企画から書ける</h3>
+              <p class="p-about__strength-body">ペルソナ・KPI・ユーザージャーニー・競合分析まで言語化してからコードに進む手順を、全4作品で意識しています。「なぜこの設計にしたか」を説明できる状態を作るのが習慣です。</p>
+            </li>
+            <li class="p-about__strength" data-reveal data-reveal-delay="3">
+              <p class="p-about__strength-num">03</p>
+              <h3 class="p-about__strength-title">自分の作品を批評する</h3>
+              <p class="p-about__strength-body">前作の弱点（画像最適化／インラインstyle／パッチ残存）を次作で潰すサイクルを4作品で回しました。「動くからOK」で止めず、何が悪かったかを言葉にする習慣を続けています。</p>
+            </li>
+          </ul>
+
+          <p class="p-about__learning" data-reveal data-reveal-delay="4">
+            <span class="p-about__learning-label">Currently Learning</span>
+            <span class="p-about__learning-body">WordPress テーマ開発 / アクセシビリティ / パフォーマンス最適化 / Sass</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         WORKS
+         ============================================================ -->
+    <section class="p-section p-works" id="works" aria-labelledby="worksHeading">
+      <div class="l-container">
+        <header class="c-section-head" data-reveal>
+          <p class="c-section-head__label">02 — Works</p>
+          <h2 class="c-section-head__title" id="worksHeading">
+            企画から実装まで、<br><em>一気通貫</em> で担当した制作物。
+          </h2>
+          <p class="c-section-head__desc">
+            各作品には Live Site／ソースコード／企画書（PDF）の3点を用意しています。
+            企画書では、ターゲット・課題設定・KPI・情報設計・デザイン意図まで言語化しています。
+            さらに「焼肉 黒耀」は React / TypeScript で再構築した発展版（Project 05）も収録しています。
+          </p>
+        </header>
+
+        <ul class="p-works__list">
+
+          <!-- 作品 01 -->
+          <li class="p-works__item" data-reveal>
+            <article class="c-work">
+              <div class="c-work__head">
+                <p class="c-work__num">Project 01</p>
+                <span class="c-work__category">Brand Site</span>
+              </div>
+              <h3 class="c-work__title">焼肉 黒耀</h3>
+              <p class="c-work__subtitle">恵比寿の高級焼肉店ブランドサイト</p>
+              <p class="c-work__body">
+                「実店舗の格を、画面の中でも保つ」を制作方針として、漆黒と古金色のミニマル配色、和洋融合タイポ、空席カレンダー予約UIまで実装。接待・記念日利用層に向けた、編集デザインのブランドサイト。
+              </p>
+              <dl class="c-work__meta">
+                <div><dt>Role</dt><dd>Planning / Information Architecture / UI Design / Front-end Development</dd></div>
+                <div><dt>Stack</dt><dd>HTML5 / CSS3 / Vanilla JS</dd></div>
+                <div><dt>Pages</dt><dd>トップ + 予約ページ</dd></div>
+              </dl>
+              <ul class="c-work__links">
+                <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou/" class="c-work__link c-work__link--primary" target="_blank" rel="noopener noreferrer">Live Site<span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/hirotonozaki/yakiniku-kokuyou" class="c-work__link" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a></li>
+                <li><a href="./assets/pdf/yakiniku-kokuyou-proposal.pdf" class="c-work__link" target="_blank" rel="noopener noreferrer">Proposal (PDF)<span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 作品 02 -->
+          <li class="p-works__item" data-reveal data-reveal-delay="1">
+            <article class="c-work">
+              <div class="c-work__head">
+                <p class="c-work__num">Project 02</p>
+                <span class="c-work__category">Recruiting LP</span>
+              </div>
+              <h3 class="c-work__title">NOVA TECH CAREERS</h3>
+              <p class="c-work__subtitle">架空IT企業の採用ランディングページ</p>
+              <p class="c-work__body">
+                「応募数・応募者の質・エントリー完了率」を改善するLPとして設計。FLOCSS命名、Glassmorphism、Formspree実送信フォーム（honeypot + 30秒クールダウン + aria-live通知）を実装。Apple × SaaS × Glass UI のビジュアル言語。
+              </p>
+              <dl class="c-work__meta">
+                <div><dt>Role</dt><dd>Planning / Information Architecture / UI Design / Front-end Development</dd></div>
+                <div><dt>Stack</dt><dd>HTML5 / CSS3 / Vanilla JS / Formspree</dd></div>
+                <div><dt>Pages</dt><dd>シングルページ（縦動線）</dd></div>
+              </dl>
+              <ul class="c-work__links">
+                <li><a href="https://hirotonozaki.github.io/nova-tech-careers/" class="c-work__link c-work__link--primary" target="_blank" rel="noopener noreferrer">Live Site<span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/hirotonozaki/nova-tech-careers" class="c-work__link" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a></li>
+                <li><a href="./assets/pdf/nova-tech-careers-proposal.pdf" class="c-work__link" target="_blank" rel="noopener noreferrer">Proposal (PDF)<span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 作品 03 -->
+          <li class="p-works__item" data-reveal data-reveal-delay="2">
+            <article class="c-work">
+              <div class="c-work__head">
+                <p class="c-work__num">Project 03</p>
+                <span class="c-work__category">Corporate Site</span>
+              </div>
+              <h3 class="c-work__title">NEXUS Inc.</h3>
+              <p class="c-work__subtitle">架空IT企業のコーポレートサイト</p>
+              <p class="c-work__body">
+                AI開発・Web制作・DX支援を行う架空IT企業のコーポレートサイト。全7ページ構成で、Apple風ミニマルレイアウト、近未来感のあるガラスUI、青〜紫グラデーションのブランド言語。フレームワーク非使用、IntersectionObserver で軽量に実装。
+              </p>
+              <dl class="c-work__meta">
+                <div><dt>Role</dt><dd>Planning / Information Architecture / UI Design / Front-end Development</dd></div>
+                <div><dt>Stack</dt><dd>HTML5 / CSS3 / Vanilla JS</dd></div>
+                <div><dt>Pages</dt><dd>全7ページ（TOP/Service/Works/Company/Recruit/Blog/Contact）</dd></div>
+              </dl>
+              <ul class="c-work__links">
+                <li><a href="https://hirotonozaki.github.io/nexus-corporate/" class="c-work__link c-work__link--primary" target="_blank" rel="noopener noreferrer">Live Site<span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/hirotonozaki/nexus-corporate" class="c-work__link" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a></li>
+                <li><a href="./assets/pdf/nexus-proposal.pdf" class="c-work__link" target="_blank" rel="noopener noreferrer">Proposal (PDF)<span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 作品 04 -->
+          <li class="p-works__item" data-reveal data-reveal-delay="3">
+            <article class="c-work">
+              <div class="c-work__head">
+                <p class="c-work__num">Project 04</p>
+                <span class="c-work__category">Clinic / WordPress</span>
+              </div>
+              <h3 class="c-work__title">NOIR MEN'S CLINIC</h3>
+              <p class="c-work__subtitle">プレミアム男性医療クリニックの公式サイト</p>
+
+              <figure class="c-work__visual" aria-label="NOIR MEN'S CLINIC デザインモックアップ">
+                <img src="./assets/images/noir-mockup.svg" alt="NOIR MEN'S CLINIC のデザインモックアップ。PCとスマートフォンで黒×ゴールドの編集デザイン、結果に、静かな自信を、のキャッチコピーが表示されている。" loading="lazy">
+                <figcaption>Design Mockup · PC + SP — Quiet Luxury</figcaption>
+              </figure>
+
+              <p class="c-work__body">
+                「Quiet Luxury — 静かな高級感」をコンセプトに、黒×ゴールドの編集デザインで医療機関の信頼性と上質感を両立。WordPressテーマ化を前提に template-parts 分割で設計し、クライアントが自社で運用できる構成に。
+              </p>
+              <dl class="c-work__meta">
+                <div><dt>Role</dt><dd>Planning / Information Architecture / UI Design / WordPress Theme Development</dd></div>
+                <div><dt>Stack</dt><dd>HTML5 / CSS3 / JS / PHP / WordPress</dd></div>
+                <div><dt>Pages</dt><dd>7ページ以上 + オリジナルテーマ</dd></div>
+              </dl>
+              <ul class="c-work__links">
+                <li><a href="./assets/pdf/noir-mens-clinic-proposal.pdf" class="c-work__link c-work__link--primary" target="_blank" rel="noopener noreferrer">Proposal (PDF)<span aria-hidden="true">↗</span></a></li>
+                <li><a href="./assets/images/noir-wp-structure.svg" class="c-work__link" target="_blank" rel="noopener noreferrer">Theme Structure<span aria-hidden="true">↗</span></a></li>
+                <li><span class="c-work__link c-work__link--static">In Development<span class="c-work__link-note">WordPress Theme · Local Environment</span></span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="p-works__item" data-reveal data-reveal-delay="4">
+            <article class="c-work c-work--react">
+              <div class="c-work__head">
+                <p class="c-work__num">Project 05</p>
+                <span class="c-work__category">Brand Site · React Edition</span>
+              </div>
+              <h3 class="c-work__title">焼肉 黒耀 — React Reservation Experience</h3>
+              <p class="c-work__subtitle">「焼肉 黒耀」を React / TypeScript で再構築した予約体験（発展実装）</p>
+
+              <figure class="c-work__visual" aria-label="焼肉 黒耀 React Edition のプレビュー">
+                <img src="./assets/images/yakiniku-react-mockup.svg" alt="焼肉 黒耀 React版のプレビュー。黒×ゴールドのトーンで、PCとスマートフォンに予約カレンダーUIが表示されている。" loading="lazy">
+                <figcaption>React Reservation UI · PC + SP — Black &amp; Gold</figcaption>
+              </figure>
+
+              <p class="c-work__body">
+                Vanilla JS 版で作った予約サイトを、<strong>保守性・再利用性・チーム開発</strong>を見据えて React + TypeScript で再構築。状態に応じて UI が自動更新される宣言的な設計に切り替え、手動 DOM 操作のバグを根本から減らしました。黒×ゴールドの世界観は崩さず、設計の「なぜ」を説明できる状態を意識しています。
+              </p>
+              <dl class="c-work__meta">
+                <div><dt>Role</dt><dd>Re-architecture / Component Design / State Management / UI</dd></div>
+                <div><dt>Stack</dt><dd>React 18 / TypeScript / Vite / SCSS Modules / React Router</dd></div>
+                <div><dt>Focus</dt><dd>コンポーネント分割・状態管理・予約UI改善・再利用性</dd></div>
+              </dl>
+              <ul class="c-work__links">
+                <li><button type="button" class="c-work__link c-work__link--primary" data-modal-open="modal-react">View Detail<span aria-hidden="true">→</span></button></li>
+                <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou-react/" class="c-work__link" target="_blank" rel="noopener noreferrer">Live Site<span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/hirotonozaki/yakiniku-kokuyou-react" class="c-work__link" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section class="p-section p-skills" id="skills" aria-labelledby="skillsHeading">
+      <div class="l-container">
+        <header class="c-section-head" data-reveal>
+          <p class="c-section-head__label">03 — Skills</p>
+          <h2 class="c-section-head__title" id="skillsHeading">
+            現場で<em>実際に手を動かす</em>ための<br>技術スタック。
+          </h2>
+          <p class="c-section-head__desc">
+            「触ったことがある」ではなく、実案件を意識して制作しているものを基準に整理しています。学習中のものは明記しています。
+          </p>
+        </header>
+
+        <div class="p-skills__grid">
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="1">
+            <p class="c-skill-card__num">SK / 01</p>
+            <h3 class="c-skill-card__title">Semantic HTML</h3>
+            <ul class="c-skill-card__list">
+              <li>HTML5 セマンティック構造</li>
+              <li>適切な見出し階層（h1〜h3）</li>
+              <li>構造化データ（JSON-LD）</li>
+              <li>OGP / Twitter Card / canonical</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="2">
+            <p class="c-skill-card__num">SK / 02</p>
+            <h3 class="c-skill-card__title">CSS Architecture</h3>
+            <ul class="c-skill-card__list">
+              <li>CSS Variables（デザイントークン管理）</li>
+              <li>FLOCSS / BEM 風命名規則</li>
+              <li>Flexbox / CSS Grid</li>
+              <li><code>clamp()</code> による可変余白</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="3">
+            <p class="c-skill-card__num">SK / 03</p>
+            <h3 class="c-skill-card__title">Responsive Design</h3>
+            <ul class="c-skill-card__list">
+              <li>モバイルファースト設計</li>
+              <li>4ブレイクポイント（480 / 768 / 1024 / 1340）</li>
+              <li>タッチターゲット 44px 以上</li>
+              <li>ハンバーガーUI / ドロワー</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="4">
+            <p class="c-skill-card__num">SK / 04</p>
+            <h3 class="c-skill-card__title">Accessibility</h3>
+            <ul class="c-skill-card__list">
+              <li>ARIA 属性（<code>aria-expanded</code> / <code>aria-controls</code>）</li>
+              <li>キーボード操作（Esc / Tab / focus-visible）</li>
+              <li><code>prefers-reduced-motion</code> 対応</li>
+              <li>WCAG AA コントラスト比準拠</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="5">
+            <p class="c-skill-card__num">SK / 05</p>
+            <h3 class="c-skill-card__title">JavaScript</h3>
+            <ul class="c-skill-card__list">
+              <li>Vanilla JS（ES6+ / IIFE モジュール構成）</li>
+              <li>IntersectionObserver</li>
+              <li>fetch API / FormData（Formspree 連携）</li>
+              <li><code>requestAnimationFrame</code> スロットリング</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="6">
+            <p class="c-skill-card__num">SK / 06</p>
+            <h3 class="c-skill-card__title">Performance</h3>
+            <ul class="c-skill-card__list">
+              <li>画像最適化（WebP / <code>loading="lazy"</code>）</li>
+              <li>Google Fonts <code>preconnect</code></li>
+              <li>Core Web Vitals 意識（LCP / CLS / INP）</li>
+              <li>Chrome DevTools での実測</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="7">
+            <p class="c-skill-card__num">SK / 07</p>
+            <h3 class="c-skill-card__title">Tools &amp; Workflow</h3>
+            <ul class="c-skill-card__list">
+              <li>Git / GitHub（ブランチ運用・差分確認）</li>
+              <li>GitHub Pages / Vercel（デプロイ）</li>
+              <li>VS Code / Chrome DevTools</li>
+              <li>XAMPP / Local（ローカル環境構築）</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card" data-reveal data-reveal-delay="8">
+            <p class="c-skill-card__num">SK / 08</p>
+            <h3 class="c-skill-card__title">Design</h3>
+            <ul class="c-skill-card__list">
+              <li>Figma（ワイヤーフレーム / カンプ / プロトタイプ）</li>
+              <li>Adobe Photoshop（画像補正 / 書き出し）</li>
+              <li>Adobe Illustrator（ロゴ / アイコン作成）</li>
+              <li>UI/UX 設計 / 情報設計</li>
+            </ul>
+          </div>
+
+          <div class="c-skill-card c-skill-card--learning" data-reveal data-reveal-delay="9">
+            <p class="c-skill-card__num">SK / 09</p>
+            <h3 class="c-skill-card__title">
+              WordPress
+              <span class="c-skill-card__badge">学習中</span>
+            </h3>
+            <ul class="c-skill-card__list">
+              <li>サイト更新・修正対応（インターン実務）</li>
+              <li>ACF / カスタム投稿タイプ（実装経験あり）</li>
+              <li>PHP（<code>functions.php</code> / テンプレート階層）</li>
+              <li>オリジナルテーマ開発 / template-parts 分割</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="p-section p-contact" id="contact" aria-labelledby="contactHeading">
+      <div class="l-container">
+        <div class="p-contact__inner" data-reveal>
+          <p class="c-section-head__label">04 — Contact</p>
+          <h2 class="p-contact__title" id="contactHeading">
+            <em>お話、聞かせてください。</em>
+          </h2>
+          <p class="p-contact__desc">
+            採用ご担当者様・制作会社の皆様、ご連絡をお待ちしております。<br>
+            企画書・実装物の補足、面談のご依頼、技術的なご質問など、<br>
+            どんな内容でもお気軽にどうぞ。
+          </p>
+
+          <ul class="p-contact__links">
+            <li>
+              <a href="mailto:hirotonozaki469@gmail.com" class="p-contact__link p-contact__link--primary">
+                <span class="p-contact__link-label">Email</span>
+                <span class="p-contact__link-value">hirotonozaki469@gmail.com</span>
+                <span class="p-contact__link-arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/hirotonozaki" target="_blank" rel="noopener noreferrer" class="p-contact__link">
+                <span class="p-contact__link-label">GitHub</span>
+                <span class="p-contact__link-value">@hirotonozaki</span>
+                <span class="p-contact__link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer" class="p-contact__link" download>
+                <span class="p-contact__link-label">Resume</span>
+                <span class="p-contact__link-value">履歴書をダウンロード (PDF)</span>
+                <span class="p-contact__link-arrow" aria-hidden="true">↓</span>
+              </a>
+            </li>
+          </ul>
+
+          <p class="p-contact__note">
+            ※ 履歴書PDFは、住所・電話番号・生年月日の一部を非公開としています。<br>
+            詳細は応募媒体経由・または面接時にお伝えいたします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="l-footer">
+    <div class="l-container">
+      <div class="l-footer__top">
+        <div class="l-footer__brand">
+          <a class="c-logo c-logo--footer" href="#hero" aria-label="トップへ">
+            <span class="c-logo__mark" aria-hidden="true">N</span>
+            <span class="c-logo__text">
+              <span class="c-logo__name">Hiroto Nozaki</span>
+              <span class="c-logo__role">Portfolio · 2026</span>
+            </span>
+          </a>
+          <p class="l-footer__tagline">伝わる順番を、設計する。</p>
+        </div>
+
+        <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+          <p class="l-footer__nav-label">Navigation</p>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="l-footer__nav" aria-label="制作物リンク">
+          <p class="l-footer__nav-label">Projects</p>
+          <ul>
+            <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou/" target="_blank" rel="noopener noreferrer">焼肉 黒耀<span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hirotonozaki.github.io/nova-tech-careers/" target="_blank" rel="noopener noreferrer">NOVA TECH CAREERS<span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hirotonozaki.github.io/nexus-corporate/" target="_blank" rel="noopener noreferrer">NEXUS Inc.<span aria-hidden="true">↗</span></a></li>
+            <li><a href="./assets/pdf/noir-mens-clinic-proposal.pdf" target="_blank" rel="noopener noreferrer">NOIR MEN'S CLINIC<span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou-react/" target="_blank" rel="noopener noreferrer">焼肉 黒耀 React Edition<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="l-footer__bottom">
+        <small>© <span data-current-year>2026</span> Hiroto Nozaki. Portfolio Work.</small>
+        <small class="l-footer__note">本サイト掲載の制作物はすべて架空企業を題材としたポートフォリオ作品です。</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       MODAL — 焼肉 黒耀 React Edition 詳細
+       ============================================================ -->
+  <dialog class="c-modal" id="modal-react" aria-labelledby="modalReactTitle">
+    <div class="c-modal__panel">
+      <header class="c-modal__head">
+        <div>
+          <p class="c-modal__eyebrow">React Edition · Case Study</p>
+          <h2 class="c-modal__title" id="modalReactTitle">焼肉 黒耀 — React Reservation Experience</h2>
+          <p class="c-modal__subtitle">Vanilla JS 版の予約サイトを React / TypeScript で再構築した発展実装</p>
+        </div>
+        <button type="button" class="c-modal__close" data-modal-close aria-label="閉じる">&times;</button>
+      </header>
+
+      <div class="c-modal__body">
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">なぜ React 化したか</h3>
+          <p class="c-modal__p">予約は「日付 → 人数 → 時間 → 入力」と<strong>状態が増えるほど DOM 操作が複雑化</strong>します。Vanilla 版は DOM とグローバル変数で状態を持っていたため変更箇所が散らばり、表示ズレやバグが起きやすい構造でした。Reactなら<strong>状態を変えるだけで UI が自動で追従</strong>し、手動更新のバグを根本から減らせます。さらに TypeScript で予約データの「形」を型として定義し、受け渡しミスを実行前に検知できるようにしました。</p>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">使用技術</h3>
+          <ul class="c-modal__tags">
+            <li>React 18</li><li>TypeScript</li><li>Vite 5</li><li>SCSS Modules</li><li>React Router</li><li>Context API</li>
+          </ul>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">Vanilla JS 版との違い</h3>
+          <div class="c-modal__ba">
+            <div class="c-modal__ba-row"><span class="c-modal__ba-k">状態管理</span><span class="c-modal__ba-b">DOM＋グローバル変数に分散</span><span class="c-modal__ba-arrow" aria-hidden="true">→</span><span class="c-modal__ba-a"><strong>useState / Context</strong> で単一の源に集約</span></div>
+            <div class="c-modal__ba-row"><span class="c-modal__ba-k">画面更新</span><span class="c-modal__ba-b">getElementById / innerHTML で手動</span><span class="c-modal__ba-arrow" aria-hidden="true">→</span><span class="c-modal__ba-a">状態変更で <strong>UI が自動再描画</strong></span></div>
+            <div class="c-modal__ba-row"><span class="c-modal__ba-k">スタイル</span><span class="c-modal__ba-b">グローバルCSSで衝突リスク</span><span class="c-modal__ba-arrow" aria-hidden="true">→</span><span class="c-modal__ba-a"><strong>SCSS Modules</strong> でスコープ分離</span></div>
+            <div class="c-modal__ba-row"><span class="c-modal__ba-k">再利用</span><span class="c-modal__ba-b">コピーで対応</span><span class="c-modal__ba-arrow" aria-hidden="true">→</span><span class="c-modal__ba-a">コンポーネント化して複数画面で共用</span></div>
+            <div class="c-modal__ba-row"><span class="c-modal__ba-k">型安全</span><span class="c-modal__ba-b">なし（実行時に発覚）</span><span class="c-modal__ba-arrow" aria-hidden="true">→</span><span class="c-modal__ba-a">型で事前に検知</span></div>
+          </div>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">コンポーネント分割</h3>
+          <p class="c-modal__p">責務でフォルダを分け、画面を小さな部品の組み合わせで構築。<strong>CourseCard</strong> はトップとコース一覧で共用し、コースデータは1ソースで一元管理しています。</p>
+          <pre class="c-modal__tree">components/
+├── ui/        … Button / SectionHeading / Reveal（汎用）
+├── layout/    … Header / Footer / Layout
+├── home/      … Hero / Concept / CoursePreview / ReserveCta
+├── course/    … CourseCard（複数画面で再利用）
+└── reserve/   … Calendar / GuestSelector / TimeSelector /
+                 CustomerForm / ReservationSummary / StepIndicator</pre>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">状態管理（State Management）</h3>
+          <p class="c-modal__p">予約は「入力 → 確認 → 完了」とページをまたぐため、選択内容を <strong>React Context</strong> に集約。各ページは <code>useReservation()</code> で読み書きするだけで状態を共有できます。入力進捗（%）や必須項目チェックも Context 側で算出し、UI は状態を映すだけのシンプルな構造にしました。</p>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">Reservation UI の改善</h3>
+          <p class="c-modal__p">「席を選ぶ体験」として、日付カレンダー（空席を ○△× 表示）→ 人数 → 時間帯 → お客様情報 の段階提示に再設計。右側の sticky サマリと進捗バーで「あと何を選べばいいか」を常に可視化しました。日付変更で時間を選び直す等の整合性も状態側で自動的に担保しています。</p>
+        </section>
+
+        <section class="c-modal__section">
+          <h3 class="c-modal__h">再利用性・保守性で意識した点</h3>
+          <ul class="c-modal__list">
+            <li><strong>再利用</strong>：CourseCard を複数画面で共用、データは1ソース。</li>
+            <li><strong>保守</strong>：責務でフォルダ分割＋型で、半年後でも追いやすい構造。</li>
+            <li><strong>拡張</strong>：予約APIの差し替え・多言語化・テーマ変更も影響範囲を局所化。</li>
+          </ul>
+        </section>
+
+        <div class="c-modal__cta">
+          <a href="https://hirotonozaki.github.io/yakiniku-kokuyou-react/" class="c-modal__btn" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
+          <a href="https://github.com/hirotonozaki/yakiniku-kokuyou-react" class="c-modal__btn c-modal__btn--ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Back to top -->
+  <a href="#hero" class="c-to-top" id="toTop" aria-label="ページトップへ戻る">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="m6 14 6-6 6 6"/>
+    </svg>
+  </a>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
