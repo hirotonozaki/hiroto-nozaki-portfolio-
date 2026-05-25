@@ -1358,18 +1358,33 @@ em {
 }
 
 
-/* ============================================================
-   React Edition — work accent & detail modal （追加）
-   既存トークン（--c-*）を再利用し、黒×ゴールドの世界観を維持
-   ============================================================ */
-button.c-work__link { font: inherit; cursor: pointer; }
 
-.c-work--react { position: relative; }
-.c-work--react::before {
-  content: "";
-  position: absolute; inset: 0 0 auto 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--c-gold), transparent 70%);
-  border-radius: var(--r) var(--r) 0 0;
+/* ============================================================
+   スマホ崩れ修正（モバイルでの横はみ出し・画像表示）
+   ── 既存コードは変更せず、末尾で「後勝ち」上書き
+   対象：NEXUS等の長文字列はみ出し / ROLE・PAGES等の右はみ出し /
+        Contactのメール表示崩れ / NOIRのスマホ画像表示
+   ============================================================ */
+
+/* 1) 作品カード：長い文字列・スラッシュ区切り・URLが右へはみ出すのを防ぐ
+      （例：NEXUS の Pages「全7ページ（TOP/Service/Works/…）」、長い Role 値） */
+.c-work,
+.p-works__item { min-width: 0; }
+.c-work__meta > div { min-width: 0; }
+.c-work__meta dd { overflow-wrap: anywhere; word-break: break-word; }
+.c-work__title,
+.c-work__subtitle { overflow-wrap: anywhere; }
+
+/* 2) 作品ビジュアル（NOIR 等）：スマホで潰れず・はみ出さず・比率を維持 */
+.c-work__visual { width: 100%; max-width: 100%; }
+.c-work__visual img { display: block; width: 100%; height: auto; max-width: 100%; }
+
+/* 3) Contact：メールアドレス等の長い値が右へはみ出さないよう折り返す */
+.p-contact__link-value { min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+
+@media (max-width: 480px) {
+  /* メール等の長い値はラベルの下に回り込ませて確実に収める */
+  .p-contact__link { flex-wrap: wrap; padding: var(--s-4) var(--s-5); row-gap: 4px; }
+  .p-contact__link-label { width: 100%; }
+  .p-contact__link-value { flex: 1 1 0; min-width: 0; font-size: 1rem; }
 }
-.c-work--react .c-work__category { color: var(--c-gold); border-color: var(--c-border-gold); }
