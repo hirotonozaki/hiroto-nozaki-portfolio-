@@ -10,7 +10,7 @@
        SEO
        ============================================================ -->
   <title>Hiroto Nozaki — Portfolio | Web Production / Front-end</title>
-  <meta name="description" content="野崎大翔（Hiroto Nozaki）のポートフォリオサイト。Web制作・フロントエンド実装・UI/UX設計を担当。架空案件4本（焼肉 黒耀／NOVA TECH CAREERS／NEXUS Inc./NOIR MEN'S CLINIC）の企画書と実装をご覧いただけます。">
+  <meta name="description" content="野崎大翔（Hiroto Nozaki）のポートフォリオサイト。Web制作・フロントエンド実装・UI/UX設計を担当。公開・運用中の実案件「日本ペンマンシップ協会」公式サイトのほか、自主制作4本（焼肉 黒耀／NOVA TECH CAREERS／NEXUS Inc./NOIR MEN'S CLINIC）の企画書と実装をご覧いただけます。">
   <meta name="theme-color" content="#0a0a0a">
   <meta name="robots" content="index,follow">
 
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/">
   <meta property="og:title" content="Hiroto Nozaki — Portfolio">
-  <meta property="og:description" content="架空企業4社の案件で、企画・情報設計・UIデザイン・実装まで担当したポートフォリオ。Web制作・フロントエンド職を目指しています。">
+  <meta property="og:description" content="公開・運用中の実案件「日本ペンマンシップ協会」公式サイトを主軸に、企画・情報設計・UIデザイン・実装まで一貫して担当したポートフォリオ。Web制作・フロントエンド職を目指しています。">
   <meta property="og:site_name" content="Hiroto Nozaki Portfolio">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:image" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/assets/images/ogp.png">
@@ -31,7 +31,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hiroto Nozaki — Portfolio">
-  <meta name="twitter:description" content="架空企業4社の案件で、企画・情報設計・UIデザイン・実装まで担当したポートフォリオ。">
+  <meta name="twitter:description" content="公開・運用中の実案件「日本ペンマンシップ協会」公式サイトを主軸に、企画・情報設計・UIデザイン・実装まで一貫担当したポートフォリオ。">
   <meta name="twitter:image" content="https://hirotonozaki.github.io/hiroto-nozaki-portfolio/assets/images/ogp.png">
   <meta name="twitter:image:alt" content="Hiroto Nozaki — Portfolio. 伝わる順番を、設計する。">
 
@@ -48,6 +48,48 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Featured work (PICK UP / 実案件) scoped styles -->
+  <style>
+    .c-feature{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:0;
+      border:1px solid var(--c-border-gold);border-radius:var(--r-lg);overflow:hidden;
+      background:linear-gradient(180deg,var(--c-bg-1),var(--c-bg));
+      box-shadow:0 40px 90px -50px rgba(0,0,0,.85);}
+    .c-feature__media{position:relative;overflow:hidden;background:var(--c-bg-2);
+      border-right:1px solid var(--c-border);min-height:100%;}
+    .c-feature__media img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+    .c-feature__pick{position:absolute;top:1rem;left:1rem;z-index:2;display:inline-flex;
+      align-items:center;gap:.5em;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;
+      text-transform:uppercase;color:#0a0a0a;background:var(--c-gold);
+      border-radius:999px;padding:.45em 1em;font-weight:500;}
+    .c-feature__body{padding:clamp(1.6rem,3vw,2.6rem);display:flex;flex-direction:column;}
+    .c-feature__head{display:flex;align-items:center;gap:.8em;margin-bottom:1rem;}
+    .c-feature__num{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;color:var(--c-gold);}
+    .c-feature__live{display:inline-flex;align-items:center;gap:.45em;font-family:var(--f-mono);
+      font-size:.66rem;letter-spacing:.06em;color:var(--c-text-2);
+      border:1px solid var(--c-border-2);border-radius:999px;padding:.3em .8em;}
+    .c-feature__live::before{content:"";width:6px;height:6px;border-radius:50%;background:#5fd07a;}
+    .c-feature__title{font-family:var(--f-display);font-weight:400;line-height:1.2;
+      font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:.5rem;}
+    .c-feature__sub{color:var(--c-text-3);font-size:.86rem;margin-bottom:1.1rem;}
+    .c-feature__desc{color:var(--c-text-2);font-size:.92rem;line-height:1.95;margin-bottom:1.4rem;}
+    .c-feature__desc em{color:var(--c-gold);font-style:italic;font-family:var(--f-display);}
+    .c-feature__meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem;}
+    .c-feature__meta li{font-family:var(--f-mono);font-size:.72rem;color:var(--c-text-2);
+      border:1px solid var(--c-border);border-radius:var(--r-sm);padding:.35em .8em;background:var(--c-surface);}
+    .c-feature__links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto;}
+    .c-feature__cta{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-body);
+      font-size:.86rem;font-weight:500;padding:.7em 1.3em;border-radius:var(--r);
+      transition:transform var(--dur) var(--ease-out),background var(--dur) var(--ease-out);}
+    .c-feature__cta--primary{background:var(--c-gold);color:#0a0a0a;}
+    .c-feature__cta--primary:hover{transform:translateY(-2px);background:var(--c-gold-bright);}
+    .c-feature__cta--ghost{border:1px solid var(--c-border-2);color:var(--c-text);}
+    .c-feature__cta--ghost:hover{border-color:var(--c-border-gold);color:var(--c-gold);}
+    @media (max-width:820px){
+      .c-feature{grid-template-columns:1fr;}
+      .c-feature__media{border-right:0;border-bottom:1px solid var(--c-border);aspect-ratio:16/10;}
+    }
+  </style>
 
   <!-- JS が無効/失敗した場合のフォールバック: reveal を即表示 -->
   <noscript>
@@ -152,9 +194,12 @@
         <dl class="p-hero__selected" data-reveal data-reveal-delay="6" aria-label="Selected Works">
           <p class="p-hero__selected-label">
             <span class="p-hero__selected-label-line" aria-hidden="true"></span>
-            Selected Works · Practice / Fictional Client Works
+            Selected Works · 1 Real Client + Practice Works
           </p>
           <div class="p-hero__selected-list">
+            <div class="p-hero__selected-item">
+              <dt>★</dt><dd>日本ペンマンシップ協会<span style="color:var(--c-gold);font-size:.7em;margin-left:.4em;">実案件</span></dd>
+            </div>
             <div class="p-hero__selected-item">
               <dt>01</dt><dd>焼肉 黒耀</dd>
             </div>
@@ -244,10 +289,48 @@
             企画から実装まで、<br><em>一気通貫</em>で担当した作品群。
           </h2>
           <p class="c-section-head__desc">
-            各作品には Live Site／ソースコード／企画書（PDF）の3点を用意しています。
-            企画書では、ターゲット・課題設定・KPI・情報設計・デザイン意図まで言語化しています。
+            最初に、<em>公開・運用中の実案件</em>として「日本ペンマンシップ協会」公式サイトを掲載しています。
+            以降は、企画・情報設計・UIデザイン・実装まで一貫して取り組んだ制作物です。
+            各作品には Live Site／ソースコード／企画書（PDF）を用意しています。
           </p>
         </header>
+
+        <!-- ★ PICK UP ─ 実案件 (日本ペンマンシップ協会) -->
+        <article class="c-feature" id="project-jpa" data-reveal aria-labelledby="jpaFeatureTitle">
+          <a class="c-feature__media" href="./jpa-case.html" aria-label="日本ペンマンシップ協会 ケーススタディを見る">
+            <span class="c-feature__pick">★ Pick Up · 実案件</span>
+            <img src="./assets/images/jpa/jpa-hero.png" alt="日本ペンマンシップ協会 公式サイトのトップページ。ネイビーとゴールドを基調にカリグラフィーのキービジュアルが表示されている。" loading="lazy">
+          </a>
+          <div class="c-feature__body">
+            <div class="c-feature__head">
+              <span class="c-feature__num">Real Client Work</span>
+              <span class="c-feature__live">公開・運用中</span>
+            </div>
+            <h3 class="c-feature__title" id="jpaFeatureTitle">日本ペンマンシップ協会 公式サイト</h3>
+            <p class="c-feature__sub">西洋書道（カリグラフィー）協会のコーポレートサイト — japanpenmanship.org</p>
+            <p class="c-feature__desc">
+              専門性が高く情報量の多い協会サイトを、<em>課題整理・情報設計・画面設計・デザイン調整・実装・検証</em>まで
+              一貫して担当。「専門性は保ちつつ、初めての人にも迷わず伝わる構造」を軸に、全13ページを設計・実装し、
+              現在も公開・運用されています。
+            </p>
+            <ul class="c-feature__meta" aria-label="案件概要">
+              <li>コーポレートサイト</li>
+              <li>全13ページ</li>
+              <li>制作期間 約15日</li>
+              <li>HTML / CSS / JS / jQuery</li>
+            </ul>
+            <div class="c-feature__links">
+              <a href="./jpa-case.html" class="c-feature__cta c-feature__cta--primary">Case Study を見る<span aria-hidden="true">→</span></a>
+              <a href="https://japanpenmanship.org/" class="c-feature__cta c-feature__cta--ghost" target="_blank" rel="noopener noreferrer">公開サイト<span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/hirotonozaki/jpa-website" class="c-feature__cta c-feature__cta--ghost" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a>
+              <a href="./assets/pdf/jpa-report.pdf" class="c-feature__cta c-feature__cta--ghost" target="_blank" rel="noopener noreferrer">企画書 (PDF)<span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <p class="c-section-head__desc" style="margin-top:var(--s-7);font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;color:var(--c-text-3);">
+          — Practice / Fictional Client Works（企画・設計力を示すための自主制作）
+        </p>
 
         <ul class="p-works__list">
 
@@ -629,6 +712,7 @@
         <nav class="l-footer__nav" aria-label="制作物リンク">
           <p class="l-footer__nav-label">Projects</p>
           <ul>
+            <li><a href="./jpa-case.html">日本ペンマンシップ協会<span aria-hidden="true">→</span></a></li>
             <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou/" target="_blank" rel="noopener noreferrer">焼肉 黒耀<span aria-hidden="true">↗</span></a></li>
             <li><a href="https://hirotonozaki.github.io/yakiniku-kokuyou-react/" target="_blank" rel="noopener noreferrer">焼肉 黒耀 — React Edition<span aria-hidden="true">↗</span></a></li>
             <li><a href="https://hirotonozaki.github.io/nova-tech-careers/" target="_blank" rel="noopener noreferrer">NOVA TECH CAREERS<span aria-hidden="true">↗</span></a></li>
